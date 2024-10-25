@@ -34,9 +34,3 @@ class MyClient(discord.Client):
             await channeln.send(embed=embed)
             time.sleep(1)
             await client.close()
-
-intents = discord.Intents.default()
-intents.message_content = True
-client = MyClient(intents=intents)
-client.run(str(D_TOKEN))
-print("DOne")
