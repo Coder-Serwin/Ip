@@ -35,7 +35,7 @@ class MyClient(discord.Client):
             time.sleep(1)
             await client.close()
 
-if __name__ == "__main__":
-  intents = discord.Intents.default()
-  intents.message_content = True
-  client = MyClient(intents=intents)
+
+intents = discord.Intents.default()
+intents.message_content = True
+client = MyClient(intents=intents)
