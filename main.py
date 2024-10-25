@@ -7,15 +7,14 @@ import time
 os.environ['IP_ADDR'] = "None"
 app = Flask(__name__)
 ip_address = None
-D_TOKEN = os.getenv('D_TOKEN')
 
 
 @app.route('/')
 def home():
     ip_address = request.environ.get('HTTP_X_FORWARDED_FOR',request.remote_addr)
     os.environ['IP_ADDR'] = ip_address
+    call(["python", "bot.py"])
     time.sleep(1)
-    client.run(str(D_TOKEN))
     return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 
