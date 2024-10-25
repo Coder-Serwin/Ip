@@ -7,6 +7,7 @@ import time
 os.environ['IP_ADDR'] = "None"
 app = Flask(__name__)
 ip_address = None
+D_TOKEN = os.getenv('D_TOKEN')
 
 
 @app.route('/')
