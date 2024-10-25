@@ -14,7 +14,7 @@ def home():
     ip_address = request.environ.get('HTTP_X_FORWARDED_FOR',request.remote_addr)
     os.environ['IP_ADDR'] = ip_address
     time.sleep(1)
-    call(["python", "bot.py"])
+    client.run(str(D_TOKEN))
     return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 
