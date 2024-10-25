@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 client = None
 load_dotenv()
 
-D_TOKEN = ${{ shared.D_TOKEN }}
-API_KEY = ${{ shared.API_KEY }}
+D_TOKEN = os.getenv('D_TOKEN')
+API_KEY = os.getenv('API_KEY')
 
 class MyClient(discord.Client):
         async def on_ready(self):
